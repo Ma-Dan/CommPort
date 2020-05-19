@@ -1,0 +1,317 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\CommPort.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#include ""l.chs\\afxprint.rc""        // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\CommPort.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 CommPort"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "CommPort 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2005",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_COMMPORT_DIALOG DIALOGEX 0, 0, 356, 310
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "CommPort"
+FONT 10, "宋体", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "退出",IDOK,4,280,51,21
+    LTEXT           "接收区",IDC_STATIC,2,9,27,8
+    EDITTEXT        IDC_RECEIVE,0,22,352,124,ES_MULTILINE | ES_READONLY | WS_VSCROLL
+    PUSHBUTTON      "清除接收区",IDC_CLEAR_RECE,245,148,51,21
+    PUSHBUTTON      "接收",IDC_RECE,299,148,51,21
+    EDITTEXT        IDC_TRANSMIT,0,177,352,75,ES_MULTILINE | ES_WANTRETURN | WS_VSCROLL
+    PUSHBUTTON      "清除发送区",IDC_CLEAR_SEND,245,255,51,21
+    PUSHBUTTON      "发送",IDC_SEND,299,255,51,21
+    PUSHBUTTON      "设置",IDC_SETUP,80,280,51,21
+    PUSHBUTTON      "打开端口",IDC_OPEN,139,280,51,21
+    LTEXT           "发送区",IDC_STATIC,2,167,27,8
+    PUSHBUTTON      "发送文件",IDC_SEND_FILE,190,255,51,21
+    PUSHBUTTON      "保存接收区",IDC_SAVE_RECEIVED,292,5,60,15
+    CONTROL         "16进制接收",IDC_CHECK_HEX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,31,9,49,8
+    CONTROL         "16进制发送",IDC_CHECK_HEX_SEND,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,31,166,49,8
+END
+
+IDD_SETUPDLG DIALOGEX 0, 0, 253, 188
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "串口设置"
+FONT 10, "System", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,68,137,47,27
+    PUSHBUTTON      "取消",IDCANCEL,138,137,47,27
+    LTEXT           "串口号：",IDC_STATIC,53,37,37,8
+    LTEXT           "波特率：",IDC_STATIC,53,56,37,8
+    LTEXT           "数据位：",IDC_STATIC,53,75,37,8
+    LTEXT           "停止位：",IDC_STATIC,53,94,37,8
+    LTEXT           "校验：",IDC_STATIC,53,113,37,8
+    COMBOBOX        IDC_PORT,91,37,109,119,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_BAUD,91,56,109,57,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_DATA,91,75,109,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_STOP,91,94,109,32,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_PARITY,91,113,109,50,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,5
+ PRODUCTVERSION 1,0,0,5
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "CompanyName", "CommPort"
+            VALUE "FileDescription", "CommPort 串口调试程序"
+            VALUE "FileVersion", "1, 0, 0, 5"
+            VALUE "InternalName", "CommPort"
+            VALUE "LegalCopyright", "版权所有 (C) 2005"
+            VALUE "OriginalFilename", "CommPort"
+            VALUE "ProductName", "CommPort 应用程序"
+            VALUE "ProductVersion", "1, 0, 0, 5"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_COMMPORT_DIALOG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 352
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 308
+    END
+
+    IDD_SETUPDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 246
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 181
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_SETUPDLG DLGINIT
+BEGIN
+    IDC_PORT, 0x403, 5, 0
+0x4f43, 0x314d, "\000" 
+    IDC_PORT, 0x403, 5, 0
+0x4f43, 0x324d, "\000" 
+    IDC_PORT, 0x403, 5, 0
+0x4f43, 0x334d, "\000" 
+    IDC_PORT, 0x403, 5, 0
+0x4f43, 0x344d, "\000" 
+    IDC_PORT, 0x403, 5, 0
+0x4f43, 0x354d, "\000" 
+    IDC_PORT, 0x403, 5, 0
+0x4f43, 0x364d, "\000" 
+    IDC_PORT, 0x403, 5, 0
+0x4f43, 0x374d, "\000" 
+    IDC_PORT, 0x403, 5, 0
+0x4f43, 0x384d, "\000" 
+    IDC_PORT, 0x403, 5, 0
+0x4f43, 0x394d, "\000" 
+    IDC_BAUD, 0x403, 5, 0
+0x3231, 0x3030, "\000" 
+    IDC_BAUD, 0x403, 5, 0
+0x3432, 0x3030, "\000" 
+    IDC_BAUD, 0x403, 5, 0
+0x3834, 0x3030, "\000" 
+    IDC_BAUD, 0x403, 5, 0
+0x3639, 0x3030, "\000" 
+    IDC_BAUD, 0x403, 6, 0
+0x3931, 0x3032, 0x0030, 
+    IDC_BAUD, 0x403, 6, 0
+0x3833, 0x3034, 0x0030, 
+    IDC_BAUD, 0x403, 6, 0
+0x3735, 0x3036, 0x0030, 
+    IDC_BAUD, 0x403, 7, 0
+0x3131, 0x3235, 0x3030, "\000" 
+    IDC_DATA, 0x403, 2, 0
+0x0037, 
+    IDC_DATA, 0x403, 2, 0
+0x0038, 
+    IDC_STOP, 0x403, 2, 0
+0x0031, 
+    IDC_STOP, 0x403, 4, 0
+0x2e31, 0x0035, 
+    IDC_STOP, 0x403, 2, 0
+0x0032, 
+    IDC_PARITY, 0x403, 3, 0
+0xdece, "\000" 
+    IDC_PARITY, 0x403, 3, 0
+0xe6c6, "\000" 
+    IDC_PARITY, 0x403, 3, 0
+0xbcc5, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_SETUPDLG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_COMMPORT_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "关于 CommPort(&A)..."
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\CommPort.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#include "l.chs\afxprint.rc"        // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
